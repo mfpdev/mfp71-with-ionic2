@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<application id="com_ibm_myapp" platformVersion="7.1.0.00.20160726-1659" xmlns="http://www.worklight.com/application-descriptor" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <displayName>myapp</displayName>
+    <description>A sample Apache Cordova application that responds to the deviceready event.</description>
+    <author>
+        <name>IBM MobileFirst Team</name>
+        <email>mobileb@us.ibm.com</email>
+        <copyright>Copyright My Company</copyright>
+        <homepage>https://developer.ibm.com/mobilefirstplatform/documentation/getting-started</homepage>
+    </author>
+    <mainFile>index.html</mainFile>
+    <thumbnailImage>www/img/thumbnail.png</thumbnailImage>
+    <accessTokenExpiration>3600</accessTokenExpiration>
+    <userIdentityRealms />
+    <licenseAppType>APPLICATION</licenseAppType>
+    <targetCategory>UNDEFINED</targetCategory>
+    <android version="1.0.0">
+        <worklightSettings include="false" />
+        <security>
+            <encryptWebResources enabled="false" />
+            <testWebResourcesChecksum enabled="false" ignoreFileExtensions="png, jpg, jpeg, gif, mp4, mp3" />
+            <publicSigningKey />
+        </security>
+    </android>
+    <iphone bundleId="com.ibm.myapp" version="1.0.0">
+        <worklightSettings include="false" />
+        <security>
+            <encryptWebResources enabled="false" />
+            <testWebResourcesChecksum enabled="false" ignoreFileExtensions="png, jpg, jpeg, gif, mp4, mp3" />
+        </security>
+    </iphone>
+</application>

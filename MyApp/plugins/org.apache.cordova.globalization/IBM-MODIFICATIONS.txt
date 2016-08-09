@@ -1,0 +1,5 @@
+iOS - check that localeIdentifier has underscore
+- Worklight RTC work item number: APAR 83508
+- Apache Cordova Jira issue: CB-9409
+- Markmail or Google Group reference: none
+- check that the localeIdentifier returned from iOS SDK has an underscore - otherwise causes a crash

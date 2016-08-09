@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar>
+     <!--<button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>-->
+    <ion-title>{{entry.title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <div [innerHTML] = "entry.encoded"></div>
+    </ion-card>
+</ion-content>

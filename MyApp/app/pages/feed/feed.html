@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+     <!--<button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>-->
+    <ion-title>Feed</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="getting-started">
+   <ion-list>
+     <ion-item *ngFor="let item of items" (click)="showEntry(item)">
+        {{item.title}}
+      </ion-item>
+</ion-list>
+</ion-content>
