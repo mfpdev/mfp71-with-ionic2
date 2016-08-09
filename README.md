@@ -12,7 +12,7 @@ mfp push
 
 mfp emulate
 
-
+---
 
 
 ionic -v2 start --no-cordova ioniccode blank
@@ -21,6 +21,8 @@ mfp cordova create myapp -p ios,android
 
 Merge files
 
-Add wlInit
+Add wlInit.js
 
-
+Add d.ts files:
+  https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/ibm-mobilefirst/ibm-mobilefirst.d.ts
+  https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/jquery/jquery.d.ts
