@@ -1,12 +1,4 @@
 {
-    "cordova-plugin-mfp": {
-        "source": {
-            "type": "local",
-            "path": "/Applications/IBM/MobileFirst-CLI/mobilefirst-cli/node_modules/cordovacmd/cordova/plugins/cordova-plugin-mfp"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
     "org.apache.cordova.device": {
         "source": {
             "type": "local",
