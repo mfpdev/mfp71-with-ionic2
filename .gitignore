@@ -68,3 +68,14 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+MyApp/platforms/ios/
+MyApp/plugins/cordova-plugin-mfp/
+MyApp/plugins/ios.json
+MyApp/plugins/org.apache.cordova.device/
+MyApp/plugins/org.apache.cordova.dialogs/
+MyApp/plugins/org.apache.cordova.geolocation/
+MyApp/plugins/org.apache.cordova.globalization/
+MyApp/plugins/org.apache.cordova.inappbrowser/
+MyApp/plugins/org.apache.cordova.network-information/
+MyApp/www/build/
