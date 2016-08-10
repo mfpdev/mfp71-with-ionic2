@@ -7,8 +7,6 @@ This sample will show you how to add Ionic V2 to MFP 7.1 App.  The sample allow 
 * [Installed NodeJS / npm](https://docs.npmjs.com/getting-started/installing-node)
 * [Installed MobileFirst Platform Foundation 7.1 Server](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/7.1/advanced-client-side-development/using-cli-to-create-build-and-manage-mobilefirst-project-artifacts/)
 
----   
-
 ## Running the sample
 
  - Clone this repository
@@ -26,20 +24,20 @@ This sample will show you how to add Ionic V2 to MFP 7.1 App.  The sample allow 
     </customSecurityTest>
     ```
 
-    - Add the realm `SampleAppRealm`
+    - Add the realm `SampleAppRealm`:
     ```xml
     <!-- Add it under realms node -->
-		<realm name="SampleAppRealm" loginModule="StrongDummy">
-			<className>com.worklight.core.auth.ext.FormBasedAuthenticator</className>
-		</realm>
+    <realm name="SampleAppRealm" loginModule="StrongDummy">
+   		<className>com.worklight.core.auth.ext.FormBasedAuthenticator</className>
+    </realm>
     ```
 
-    - Add the `loginModule`
+    - Add the `loginModule`:
     ```xml
     <!-- Add it under loginModules node -->
     <loginModule name="StrongDummy" expirationInSeconds="3600">
-			<className>com.worklight.core.auth.ext.NonValidatingLoginModule</className>
-		</loginModule>
+        <className>com.worklight.core.auth.ext.NonValidatingLoginModule</className>
+    </loginModule>
     ```
 
 - Deploy the MFRSSAdapter
@@ -52,41 +50,39 @@ This sample will show you how to add Ionic V2 to MFP 7.1 App.  The sample allow 
     mfp push
     ```
 
-- Install and run the Sample App
-  - From terminal navigate into [MyApp](https://github.com/mfpdev/mfp71-with-ionic2/tree/master/MyApp) and run:
-  ```bash
-  npm install
-  ```
+  - Install and run the Sample App
+	  - From terminal navigate into [MyApp](https://github.com/mfpdev/mfp71-with-ionic2/tree/master/MyApp) and run:
+	  ```bash
+	  npm install
+	  ```
+	
+	  - Transpile the TypeScript code in [app](https://github.com/mfpdev/mfp71-with-ionic2/tree/master/MyApp/app) folder:
+	
+	    - Run `build` for just compile the TypeScript one time
+	    ```bash
+	    gulp build
+	    ```
+	    - Or run `watch` to let gulp transpile it on every change you do in the [app](https://github.com/mfpdev/mfp71-with-ionic2/tree/master/MyApp/app) folder.
+	    ```bash
+	    gulp watch
+	    ```
+	  - Add your platform (ios/android):
+	    ```bash
+	    mfp cordova platform add ios
+	    ```
+	
+	  - Add the cordova-plugin-mfp plugin  
+	    ```bash
+	    mfp cordova plugin add cordova-plugin-mfp
+	    ```
+	
+	  - Deploy the application
+	    ```bash
+	    mfp cordova push
+	    ```
 
-  - Transpile the TypeScript code in [app](https://github.com/mfpdev/mfp71-with-ionic2/tree/master/MyApp/app) folder:
+  ## Create the above template from scratch
 
-    - Run `build` for just compile the TypeScript one time
-    ```bash
-    gulp build
-    ```
-    - Or run `watch` to let gulp transpile it on every change you do in the [app](https://github.com/mfpdev/mfp71-with-ionic2/tree/master/MyApp/app) folder.
-    ```bash
-    gulp watch
-    ```
-  - Add your platform (ios/android):
-    ```bash
-    mfp cordova platform add ios
-    ```
-
-  - Add the cordova-plugin-mfp plugin  
-    ```bash
-    mfp cordova plugin add cordova-plugin-mfp
-    ```
-
-  - Deploy the application
-  ```bash
-  mfp cordova push
-  ```
-
-  ---  
-
-  ## Create blank template from scratch
-  
 
   ### Supported Levels
   IBM MobileFirst Platform Foundation 8.0
