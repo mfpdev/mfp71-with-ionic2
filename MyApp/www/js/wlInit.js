@@ -26,4 +26,5 @@ function wlCommonInit(){
     } else if(env === WL.Environment.ANDROID){
         document.body.classList.add('platform-android');
     }
+	document.dispatchEvent(new Event('mfpready'));
 }
