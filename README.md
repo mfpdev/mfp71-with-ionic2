@@ -25,22 +25,6 @@ This sample will show you how to add Ionic V2 to MFP 7.1 App.  The sample allow 
     </customSecurityTest>
     ```
 
-    - Add the realm `SampleAppRealm`:
-    ```xml
-    <!-- Add it under realms node -->
-    <realm name="SampleAppRealm" loginModule="StrongDummy">
-   		<className>com.worklight.core.auth.ext.FormBasedAuthenticator</className>
-    </realm>
-    ```
-
-    - Add the `loginModule`:
-    ```xml
-    <!-- Add it under loginModules node -->
-    <loginModule name="StrongDummy" expirationInSeconds="3600">
-        <className>com.worklight.core.auth.ext.NonValidatingLoginModule</className>
-    </loginModule>
-    ```
-
 - Deploy the MFRSSAdapter
 
   - Copy the [MFRSSAdapter](https://github.com/mfpdev/mfp71-with-ionic2/tree/master/MFRSSAdapter) folder to `adapters` folder in your MFP 7.1 server
