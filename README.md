@@ -1,4 +1,4 @@
-# Running MobileFirst Platform Foundation 7.1 Cordova App with Ionic2
+# Running MobileFirst Platform Foundation 7.1 Cordova app with Ionic2
 
 This sample will show you how to add Ionic2 to an MFP 7.1 Cordova app.  The app in this sample calls a MobileFirst Blog RSS adapter protected with a login form.  
 
@@ -38,7 +38,7 @@ This sample will show you how to add Ionic2 to an MFP 7.1 Cordova app.  The app 
     $ mfp push
     ```
 
-- Install and run the Sample App
+- Install and run the Sample app
   - From the terminal window, navigate into [MyApp](https://github.com/mfpdev/mfp71-with-ionic2/tree/master/MyApp) and run:
   ```bash
   $ npm install
@@ -74,10 +74,10 @@ This sample will show you how to add Ionic2 to an MFP 7.1 Cordova app.  The app 
     $ mfp cordova emulate
     ```
 
-  ## How to create a blank template of an MFP 7.1 Cordova App that uses Ionic2
+  ## How to create a blank template of an MFP 7.1 Cordova app that uses Ionic2
   The main challenges are:
 
-  - Ionic2 uses a later version of Cordova than MFP 7.1 (Cordova 3.7.0) - to deal with this you need to create Ionic2 project without Cordova and then merge it into an MFP 7.1 Cordova App.
+  - Ionic2 uses a later version of Cordova than MFP 7.1 (Cordova 3.7.0) - to deal with this you need to create Ionic2 project without Cordova and then merge it into an MFP 7.1 Cordova app.
   - Ionic2 currently works with TypeScript and MFP 7.1 is not built to call from TypeScript - to deal with this you need to add the .d.ts files into the typings folder and use `gulp` commands
 
   ### Guidelines:
