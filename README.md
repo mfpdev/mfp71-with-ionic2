@@ -1,17 +1,13 @@
 # Running MobileFirst Platform Foundation 7.1 Cordova App With Ionic V2 (Beta)
 
-This sample will show you how to add Ionic V2 to MFP 7.1 App.  The sample allow calling a MobileFirst Blog RSS adapter which protected with login form.
+This sample will show you how to add Ionic V2 to MFP 7.1 App.  The sample allow calling a MobileFirst Blog RSS adapter which protected with login form.  
 
 ## Prerequisites
 * [Installed Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 * [Installed NodeJS / npm](https://docs.npmjs.com/getting-started/installing-node)
 * [Installed MobileFirst Platform Foundation 7.1 Server](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/7.1/advanced-client-side-development/using-cli-to-create-build-and-manage-mobilefirst-project-artifacts/)
 
-<<<<<<< HEAD
 ---   
-=======
-mfp cordova platform add ios (or android)
->>>>>>> f7f5817f2bfb7768e8a697072033ed63ed19d568
 
 ## Running the sample
 
@@ -22,7 +18,6 @@ mfp cordova platform add ios (or android)
 
 - Add the `SecurityTest` to `authenticationConfig.xml`
 
-<<<<<<< HEAD
     - Add the customSecurityTest `AuthSecurityTest`:
     ```xml
     <!-- Add it under securityTests node -->
@@ -87,19 +82,26 @@ mfp cordova platform add ios (or android)
   ```bash
   mfp cordova push
   ```
-=======
----
 
+  ---  
 
-ionic -v2 start --no-cordova ioniccode blank
+  ## Create blank template from scratch
+  
 
-mfp cordova create myapp -p ios,android
+  ### Supported Levels
+  IBM MobileFirst Platform Foundation 8.0
 
-Merge files
+  ### License
+  Copyright 2016 IBM Corp.
 
-Add wlInit.js
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
 
-Add d.ts files:
-  https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/ibm-mobilefirst/ibm-mobilefirst.d.ts
-  https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/jquery/jquery.d.ts
->>>>>>> f7f5817f2bfb7768e8a697072033ed63ed19d568
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
