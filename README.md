@@ -1,6 +1,6 @@
-# Running MobileFirst Platform Foundation 7.1 Cordova App and Ionic V2
+# Running MobileFirst Platform Foundation 7.1 Cordova App with Ionic2
 
-This sample will show you how to add Ionic V2 to MFP 7.1 App.  The sample allow calling a MobileFirst Blog RSS adapter which protected with login form.  
+This sample will show you how to add Ionic2 to an MFP 7.1 Cordova app.  The app in this sample calls a MobileFirst Blog RSS adapter protected with a login form.  
 
 ##Demo
 [![MFP 7.1 + Ionic2](https://img.youtube.com/vi/dzQqyDVcehQ/0.jpg)](https://www.youtube.com/watch?v=dzQqyDVcehQ)
@@ -12,7 +12,7 @@ This sample will show you how to add Ionic V2 to MFP 7.1 App.  The sample allow 
 
 ## Running the sample
 
- - Clone this repository   
+- Clone this repository   
 
  ```bash
  $ git clone https://github.com/mfpdev/mfp71-with-ionic2.git
@@ -30,30 +30,31 @@ This sample will show you how to add Ionic V2 to MFP 7.1 App.  The sample allow 
 
 - Deploy the MFRSSAdapter
 
-  - Copy the [MFRSSAdapter](https://github.com/mfpdev/mfp71-with-ionic2/tree/master/MFRSSAdapter) folder to `adapters` folder in your MFP 7.1 server
+  - Copy the [MFRSSAdapter](https://github.com/mfpdev/mfp71-with-ionic2/tree/master/MFRSSAdapter) folder to the `adapters` folder on your MFP 7.1 server.
 
   - Build and deploy the adapter:
-    - From terminal navigate into the adapter folder and run:
+    - From the terminal window, navigate into the adapter folder and run the following:
     ```bash
     $ mfp push
     ```
 
 - Install and run the Sample App
-  - From terminal navigate into [MyApp](https://github.com/mfpdev/mfp71-with-ionic2/tree/master/MyApp) and run:
+  - From the terminal window, navigate into [MyApp](https://github.com/mfpdev/mfp71-with-ionic2/tree/master/MyApp) and run:
   ```bash
   $ npm install
   ```
 
-  - Transpile the TypeScript code in [app](https://github.com/mfpdev/mfp71-with-ionic2/tree/master/MyApp/app) folder:
+  - [Transpile](https://www.wikiwand.com/en/Source-to-source_compiler) the TypeScript code in the [app](https://github.com/mfpdev/mfp71-with-ionic2/tree/master/MyApp/app) folder with [gulp](http://gulpjs.com/) commands:
 
-    - Run `build` for just compile the TypeScript one time
+    - Run `build` to transpile the [TypeScript](https://www.typescriptlang.org/) code once
     ```bash
     $ gulp build
     ```
-    - Or run `watch` to let gulp transpile it on every change you do in the [app](https://github.com/mfpdev/mfp71-with-ionic2/tree/master/MyApp/app) folder.
+    - Or run `watch` to let `gulp` transpile the TypeScript code on every time you change something in the [app](https://github.com/mfpdev/mfp71-with-ionic2/tree/master/MyApp/app) folder.
     ```bash
     $ gulp watch
     ```
+
   - Add your platform (ios/android):
     ```bash
     $ mfp cordova platform add ios
@@ -68,31 +69,37 @@ This sample will show you how to add Ionic V2 to MFP 7.1 App.  The sample allow 
     ```bash
     $ mfp cordova push
     ```
+  - Run the application
+    ```bash
+    $ mfp cordova emulate
+    ```
 
-  ## Create the above template from scratch
-  In this section I will explain how to create blank template of MFP 7.1 and Ionic2 like the above sample. There are some challenges here:
+  ## How to create a blank template of an MFP 7.1 Cordova App that uses Ionic2
+  The main challenges are:
 
-  - MFP 7.1 Cordova App is come with Cordova 3.7.0 - to solve this you need to create Ionic2 project without Cordova and then merge it into MFP 7.1 Cordova App
-  - The Ionic V2 works for now with TypeScript - to solve this you need to add the d.ts files and use the gulp commands
+  - Ionic2 uses a later version of Cordova than MFP 7.1 (Cordova 3.7.0) - To deal with this you need to create Ionic2 project without Cordova and then merge it into an MFP 7.1 Cordova App.
+  - Ionic2 currently works with TypeScript and MFP 7.1 is not built to call from TypeScript - to deal with this you need to add the .d.ts files into the typings folder and use `gulp` commands
 
-  - Create the MFP 7.1 Cordova App by running the following commands in terminal:
+  ### Guidelines:
+
+  - Create the MFP 7.1 Cordova app by running the following commands in a terminal window:
   ```bash
   $ mfp cordova create myapp -p ios,android
   $ cd myapp
   $ npm install
   ```
 
-  - Create empty Ionic2 App by running the following commands in terminal:
+  - Create an empty Ionic2 app by running the following commands in a terminal window:
   ```bash
   $ ionic start -v2 --no-cordova ioniccode blank
   ```
 
-  - Copy Ionic2 Into MFP 7.1 Cordova App by running the following command in terminal:
+  - Copy Ionic2 Into an MFP 7.1 Cordova app by running the following command in a terminal window:
   ```bash
   $ cp -a ./ioniccode/. ./myapp/
   ```
 
-  - Add wlInit.js into `./myapp/www/js/` by running the follow command in terminal:
+  - Add wlInit.js into `./myapp/www/js/` by running the follow command in a terminal window:
   ```bash
   $ curl -o ./myapp/www/js/wlInit.js https://raw.githubusercontent.com/mfpdev/mfp71-with-ionic2/master/MyApp/www/js/wlInit.js
   ```
@@ -102,7 +109,7 @@ This sample will show you how to add Ionic V2 to MFP 7.1 App.  The sample allow 
   <script src="js/wlInit.js"></script>
   ```
 
-  - Add the d.ts files by running the follow command in terminal:
+  - Add the .d.ts files by running the follow command in a terminal window:
   ```bash
   $ curl -o ./myapp/typings/jquery/jquery.d.ts https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/jquery/jquery.d.ts --create-dirs
   $ curl -o ./myapp/typings/ibm-mobilefirst/ibm-mobilefirst.d.ts https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/ibm-mobilefirst/ibm-mobilefirst.d.ts --create-dirs
@@ -115,7 +122,7 @@ This sample will show you how to add Ionic V2 to MFP 7.1 App.  The sample allow 
 
   - Run `gulp build` or `gulp watch`
 
-  - Preview/Run the app by running one of the commands:
+  - Preview / Run the app by running one of the commands in a terminal window:
 
   ```bash
   mfp cordova emulate
@@ -125,10 +132,10 @@ This sample will show you how to add Ionic V2 to MFP 7.1 App.  The sample allow 
   mfp cordova preview
   ```
 
-  *Caution: Always run cordova command with mfp, running cordova directly will cause the app to stop working since MFP 7.1 is working with Cordova 3.7*
+  *Caution: Always run Cordova commands using the mfp CLI (e.g mfp cordova emulate). Running Cordova directly will cause the app to stop working since MFP 7.1 does not work with Cordova version beyond 3.7*
 
   ### Supported Levels
-  IBM MobileFirst Platform Foundation 8.0
+  IBM MobileFirst Platform Foundation 7.1
 
   ### License
   Copyright 2016 IBM Corp.
