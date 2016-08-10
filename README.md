@@ -98,7 +98,7 @@ This sample will show you how to add Ionic V2 to MFP 7.1 App.  The sample allow 
   ```
 
   - Create empty Ionic2 App by running the following commands in terminal:
-  ```bash
+  ```bash 
   $ ionic start -v2 --no-cordova ioniccode blank
   ```
 
