@@ -6,9 +6,9 @@ This sample will show you how to add Ionic2 to an MFP 7.1 Cordova app.  The app 
 [![MFP 7.1 + Ionic2](https://img.youtube.com/vi/dzQqyDVcehQ/0.jpg)](https://www.youtube.com/watch?v=dzQqyDVcehQ)
 
 ## Prerequisites
-* [Installed Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-* [Installed NodeJS / npm](https://docs.npmjs.com/getting-started/installing-node)
-* [Installed MobileFirst Platform Foundation 7.1 Server](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/7.1/advanced-client-side-development/using-cli-to-create-build-and-manage-mobilefirst-project-artifacts/)
+* [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+* [Install NodeJS / npm](https://docs.npmjs.com/getting-started/installing-node)
+* [Install MobileFirst Platform Foundation 7.1 Server](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/7.1/advanced-client-side-development/using-cli-to-create-build-and-manage-mobilefirst-project-artifacts/)
 
 ## Running the sample
 
@@ -34,12 +34,14 @@ This sample will show you how to add Ionic2 to an MFP 7.1 Cordova app.  The app 
 
   - Build and deploy the adapter:
     - From the terminal window, navigate into the adapter folder and run the following:
+
     ```bash
     $ mfp push
     ```
 
 - Install and run the Sample app
   - From the terminal window, navigate into [MyApp](https://github.com/mfpdev/mfp71-with-ionic2/tree/master/MyApp) and run:
+
   ```bash
   $ npm install
   ```
@@ -47,29 +49,35 @@ This sample will show you how to add Ionic2 to an MFP 7.1 Cordova app.  The app 
   - [Transpile](https://www.wikiwand.com/en/Source-to-source_compiler) the TypeScript code in the [app](https://github.com/mfpdev/mfp71-with-ionic2/tree/master/MyApp/app) folder with [gulp](http://gulpjs.com/) commands:
 
     - Run `build` to transpile the [TypeScript](https://www.typescriptlang.org/) code once
+ 
     ```bash
     $ gulp build
     ```
     - Or run `watch` to let `gulp` transpile the TypeScript code on every time you change something in the [app](https://github.com/mfpdev/mfp71-with-ionic2/tree/master/MyApp/app) folder.
+ 
     ```bash
     $ gulp watch
     ```
 
   - Add your platform (ios/android):
+
     ```bash
     $ mfp cordova platform add ios
     ```
 
-  - Add the cordova-plugin-mfp plugin  
+  - Add the cordova-plugin-mfp plugin  :
+
     ```bash
     $ mfp cordova plugin add cordova-plugin-mfp
     ```
 
-  - Deploy the application
+  - Deploy the application:
+
     ```bash
     $ mfp cordova push
     ```
-  - Run the application
+  - Run the application:
+
     ```bash
     $ mfp cordova emulate
     ```
@@ -95,16 +103,19 @@ This sample will show you how to add Ionic2 to an MFP 7.1 Cordova app.  The app 
   ```
 
   - Copy Ionic2 Into an MFP 7.1 Cordova app by running the following command in a terminal window:
+
   ```bash
   $ cp -a ./ioniccode/. ./myapp/
   ```
 
   - Add wlInit.js into `./myapp/www/js/` by running the follow command in a terminal window:
+
   ```bash
   $ curl -o ./myapp/www/js/wlInit.js https://raw.githubusercontent.com/mfpdev/mfp71-with-ionic2/master/MyApp/www/js/wlInit.js
   ```
 
-  - Add the reference to wlInit.js in ./myapp/www/index.html
+  - Add the reference to wlInit.js in ./myapp/www/index.html:
+
   ```html
   <script src="js/wlInit.js"></script>
   ```
