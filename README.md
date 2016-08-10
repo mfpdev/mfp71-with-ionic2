@@ -9,7 +9,8 @@ This sample will show you how to add Ionic V2 to MFP 7.1 App.  The sample allow 
 
 ## Running the sample
 
- - Clone this repository
+ - Clone this repository   
+ 
  ```bash
  git clone https://github.com/mfpdev/mfp71-with-ionic2.git
  ```
