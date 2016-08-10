@@ -7,7 +7,11 @@ This sample will show you how to add Ionic V2 to MFP 7.1 App.  The sample allow 
 * [Installed NodeJS / npm](https://docs.npmjs.com/getting-started/installing-node)
 * [Installed MobileFirst Platform Foundation 7.1 Server](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/7.1/advanced-client-side-development/using-cli-to-create-build-and-manage-mobilefirst-project-artifacts/)
 
+<<<<<<< HEAD
 ---   
+=======
+mfp cordova platform add ios (or android)
+>>>>>>> f7f5817f2bfb7768e8a697072033ed63ed19d568
 
 ## Running the sample
 
@@ -18,6 +22,7 @@ This sample will show you how to add Ionic V2 to MFP 7.1 App.  The sample allow 
 
 - Add the `SecurityTest` to `authenticationConfig.xml`
 
+<<<<<<< HEAD
     - Add the customSecurityTest `AuthSecurityTest`:
     ```xml
     <!-- Add it under securityTests node -->
@@ -82,3 +87,19 @@ This sample will show you how to add Ionic V2 to MFP 7.1 App.  The sample allow 
   ```bash
   mfp cordova push
   ```
+=======
+---
+
+
+ionic -v2 start --no-cordova ioniccode blank
+
+mfp cordova create myapp -p ios,android
+
+Merge files
+
+Add wlInit.js
+
+Add d.ts files:
+  https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/ibm-mobilefirst/ibm-mobilefirst.d.ts
+  https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/jquery/jquery.d.ts
+>>>>>>> f7f5817f2bfb7768e8a697072033ed63ed19d568
