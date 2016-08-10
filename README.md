@@ -12,7 +12,8 @@ This sample will show you how to add Ionic V2 to MFP 7.1 App.  The sample allow 
 
 ## Running the sample
 
- - Clone this repository
+ - Clone this repository   
+
  ```bash
  $ git clone https://github.com/mfpdev/mfp71-with-ionic2.git
  ```
@@ -25,22 +26,6 @@ This sample will show you how to add Ionic V2 to MFP 7.1 App.  The sample allow 
     <customSecurityTest name="AuthSecurityTest">
       <test isInternalUserID="true" realm="SampleAppRealm"/>
     </customSecurityTest>
-    ```
-
-    - Add the realm `SampleAppRealm`
-    ```xml
-    <!-- Add it under realms node -->
-		<realm name="SampleAppRealm" loginModule="StrongDummy">
-			<className>com.worklight.core.auth.ext.FormBasedAuthenticator</className>
-		</realm>
-    ```
-
-    - Add the `loginModule`
-    ```xml
-    <!-- Add it under loginModules node -->
-    <loginModule name="StrongDummy" expirationInSeconds="3600">
-        <className>com.worklight.core.auth.ext.NonValidatingLoginModule</className>
-    </loginModule>
     ```
 
 - Deploy the MFRSSAdapter
@@ -98,7 +83,7 @@ This sample will show you how to add Ionic V2 to MFP 7.1 App.  The sample allow 
   ```
 
   - Create empty Ionic2 App by running the following commands in terminal:
-  ```bash 
+  ```bash
   $ ionic start -v2 --no-cordova ioniccode blank
   ```
 
@@ -140,6 +125,7 @@ This sample will show you how to add Ionic V2 to MFP 7.1 App.  The sample allow 
   mfp cordova preview
   ```
 
+  *Caution: Always run cordova command with mfp, running cordova directly will cause the app to stop working since MFP 7.1 is working with Cordova 3.7*
 
   ### Supported Levels
   IBM MobileFirst Platform Foundation 8.0
