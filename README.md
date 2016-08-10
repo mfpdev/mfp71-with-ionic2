@@ -77,7 +77,7 @@ This sample will show you how to add Ionic2 to an MFP 7.1 Cordova app.  The app 
   ## How to create a blank template of an MFP 7.1 Cordova App that uses Ionic2
   The main challenges are:
 
-  - Ionic2 uses a later version of Cordova than MFP 7.1 (Cordova 3.7.0) - To deal with this you need to create Ionic2 project without Cordova and then merge it into an MFP 7.1 Cordova App.
+  - Ionic2 uses a later version of Cordova than MFP 7.1 (Cordova 3.7.0) - to deal with this you need to create Ionic2 project without Cordova and then merge it into an MFP 7.1 Cordova App.
   - Ionic2 currently works with TypeScript and MFP 7.1 is not built to call from TypeScript - to deal with this you need to add the .d.ts files into the typings folder and use `gulp` commands
 
   ### Guidelines:
