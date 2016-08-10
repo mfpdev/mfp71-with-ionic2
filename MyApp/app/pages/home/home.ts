@@ -19,7 +19,7 @@ export class HomePage {
   getMFBlogFeed() {  
     this.registerAndHandleChallenge ();
     var nav = this.navCtrl;
-    var request = new WLResourceRequest('/adapters/SimpleAdapter/getFeed', "GET");
+    var request = new WLResourceRequest('/adapters/MFRSSAdapter/getFeed', "GET");
     request.send().then(
       function (response) {
         nav.push(Feed, {
