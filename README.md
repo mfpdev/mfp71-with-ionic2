@@ -120,7 +120,7 @@ This sample will show you how to add Ionic V2 to MFP 7.1 App.  The sample allow 
   - Add the d.ts files by running the follow command in terminal:
   ```bash
   $ curl -o ./myapp/typings/jquery/jquery.d.ts https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/jquery/jquery.d.ts --create-dirs
-  $ curl -o ./myapp/typings/ibm-mobilefirst/ibm-mobilefirst.d.ts https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/ibm-mobilefirst/ibm-mobilefirst.d.ts --create-dirs
+  $ curl -o ./myapp/typings/ibm-mobilefirst/ibm-mobilefirst.d.ts https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/ibm-mobilefirst/ibm-mobilefirst.d.ts --create-dirs
   ```
 
   - Add reference to ibm-mobilefirst.d.ts in `./myapp/index.d.ts`
@@ -130,8 +130,15 @@ This sample will show you how to add Ionic V2 to MFP 7.1 App.  The sample allow 
 
   - Run `gulp build` or `gulp watch`
 
-  
+  - Preview/Run the app by running one of the commands:
 
+  ```bash
+  mfp cordova emulate
+  ```
+
+  ```bash
+  mfp cordova preview
+  ```
 
 
   ### Supported Levels
