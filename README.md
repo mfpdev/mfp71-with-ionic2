@@ -91,6 +91,7 @@ This sample will show you how to add Ionic2 to an MFP 7.1 Cordova app.  The app 
   ### Guidelines:
 
   - Create the MFP 7.1 Cordova app by running the following commands in a terminal window:
+  
   ```bash
   $ mfp cordova create myapp -p ios,android
   $ cd myapp
@@ -98,6 +99,7 @@ This sample will show you how to add Ionic2 to an MFP 7.1 Cordova app.  The app 
   ```
 
   - Create an empty Ionic2 app by running the following commands in a terminal window:
+  
   ```bash
   $ ionic start -v2 --no-cordova ioniccode blank
   ```
@@ -121,14 +123,17 @@ This sample will show you how to add Ionic2 to an MFP 7.1 Cordova app.  The app 
   ```
 
   - Add the .d.ts files by running the follow command in a terminal window:
+  
   ```bash
   $ curl -o ./myapp/typings/jquery/jquery.d.ts https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/jquery/jquery.d.ts --create-dirs
   $ curl -o ./myapp/typings/ibm-mobilefirst/ibm-mobilefirst.d.ts https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/ibm-mobilefirst/ibm-mobilefirst.d.ts --create-dirs
   ```
 
-  - Add reference to ibm-mobilefirst.d.ts in `./myapp/index.d.ts`
-  /// <reference path="ibm-mobilefirst/ibm-mobilefirst.d.ts" />
+  - Add reference to ibm-mobilefirst.d.ts in `./myapp/index.d.ts`:
 
+  ```javascript
+  /// <reference path="ibm-mobilefirst/ibm-mobilefirst.d.ts" />
+  ```
   - Run `npm install`
 
   - Run `gulp build` or `gulp watch`
