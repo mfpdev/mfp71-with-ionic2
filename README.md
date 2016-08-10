@@ -65,6 +65,11 @@ This sample will show you how to add Ionic V2 to MFP 7.1 App.  The sample allow 
 	    ```bash
 	    mfp push
 	    ```
+	  - Run the application
+	    
+	    ```bash
+	    mfp cordova emulate
+	    ```
 
  *Caution: Always run cordova command with mfp, running cordova directly will cause the app to stop working since MFP 7.1 is working with Cordova 3.7*
   
