@@ -6,6 +6,7 @@ This sample will show you how to add Ionic2 to an MFP 7.1 Cordova app.  The app 
 [![MFP 7.1 + Ionic2](https://img.youtube.com/vi/dzQqyDVcehQ/0.jpg)](https://www.youtube.com/watch?v=dzQqyDVcehQ)
 
 ## Prerequisites
+* [Install Ionic2](http://ionicframework.com/docs/v2/getting-started/installation)
 * [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 * [Install NodeJS / npm](https://docs.npmjs.com/getting-started/installing-node)
 * [Install MobileFirst Platform Foundation 7.1 Server](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/7.1/advanced-client-side-development/using-cli-to-create-build-and-manage-mobilefirst-project-artifacts/)
