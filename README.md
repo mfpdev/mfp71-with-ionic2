@@ -19,7 +19,7 @@ This sample will show you how to add Ionic2 to an MFP 7.1 Cordova app.  The app 
  $ git clone https://github.com/mfpdev/mfp71-with-ionic2.git
  ```
 
-- Add the `SecurityTest` to `authenticationConfig.xml`
+- Add the `SecurityTest` to `Ionic2AndMFP/server/conf/authenticationConfig.xml` file 
 
     - Add the customSecurityTest `AuthSecurityTest`:
     ```xml
@@ -75,7 +75,7 @@ This sample will show you how to add Ionic2 to an MFP 7.1 Cordova app.  The app 
   - Deploy the application:
 
     ```bash
-    $ mfp cordova push
+    $ mfp push
     ```
   - Run the application:
 
