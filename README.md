@@ -31,7 +31,7 @@ This sample will show you how to add Ionic2 to an MFP 7.1 Cordova app.  The app 
 
 - Deploy the MFRSSAdapter
 
-  - Copy the [MFRSSAdapter](https://github.com/mfpdev/mfp71-with-ionic2/tree/master/MFRSSAdapter) folder to the `adapters` folder on your MFP 7.1 server.
+  - Copy the [MFRSSAdapter](https://github.com/mfpdev/mfp71-with-ionic2/tree/master/MFRSSAdapter) Copy the MFRSSAdapter folder to the `Ionic2AndMFP/adapters` folder on your MFP 7.1 server.
 
   - Build and deploy the adapter:
     - From the terminal window, navigate into the adapter folder and run the following:
